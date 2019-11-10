@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 function courses(state = INITIAL_STATE, action) {
   switch (action.type) {
     case "ADD_COURSE":
-      return { ...state, data: [...state.data, action.title] };
+      return { ...state, data: [action.title, ...state.data] };
     default:
       return state;
   }
